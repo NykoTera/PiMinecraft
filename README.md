@@ -25,7 +25,7 @@ This project is made for people that want to easily have a running server at hom
 There are [lot of tutorial](https://www.makeuseof.com/tag/setup-minecraft-server-raspberry-pi/) on the internet on how to easily setup this kind on server.
 I'll only leave you the "run.sh" script. See the previous link for installation
 
-**For the latest spigot version, [please see Spigot wiki](https://www.spigotmc.org/wiki/buildtools/#latest). Remember that the saving script can help you **
+**For the latest spigot version, [please see Spigot wiki](https://www.spigotmc.org/wiki/buildtools/#latest). Remember that the saving script can help you.**
 **[You can fin more help for configuration and parameters on spigot wiki](https://www.spigotmc.org/wiki/spigot/)**
 
 Remember that the first launch will build all the data needed by the server (map,...).
