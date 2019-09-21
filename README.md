@@ -14,6 +14,7 @@ This project is made for people that want to easily have a running server at hom
 
 1. You'll need to ensure you're running the [latest raspbian version](https://www.raspberrypi.org/documentation/raspbian/updating.md)
 2. You'll need the [latest java version](https://tecadmin.net/install-oracle-java-11-on-debian-9-stretch/)
+3. [Download the latest buildtools.jar to generate a spigot.jar file](https://www.spigotmc.org/wiki/buildtools/)
 
 ---
 
@@ -22,7 +23,7 @@ This project is made for people that want to easily have a running server at hom
 **Before thinking to save a server, you'll have to setup your server**
 
 There are [lot of tutorial](https://www.makeuseof.com/tag/setup-minecraft-server-raspberry-pi/) on the internet on how to easily setup this kind on server.
-I'll only let you a spigot server (1.14.4) and a "run.sh" script. See the previous link for installation
+I'll only leave you the "run.sh" script. See the previous link for installation
 
 **For the latest spigot version, [please see Spigot wiki](https://www.spigotmc.org/wiki/buildtools/#latest). Remember that the saving script can help you **
 **[You can fin more help for configuration and parameters on spigot wiki](https://www.spigotmc.org/wiki/spigot/)**
