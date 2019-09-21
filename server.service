@@ -1,0 +1,16 @@
+[Unit]
+Description=Lance mon serveur Minecraft
+After=network.target
+
+[Service]
+Type=simple
+
+ExecStart=/usr/bin/screen -L -DmS teramineserver /home/pi/Desktop/MinecraftServer/TeraMineServer/run.sh
+
+ExecStop=/usr/bin/screen -p 0 -S teramineserver -X stuff "save-all\015"
+ExecStop=/bin/sleep 5
+ExecStop=/usr/bin/screen -p 0 -S teramineserver -X stuff "stop\015"
+ExecStop=/bin/sleep 10
+
+[Install]
+WantedBy=multi-user.target

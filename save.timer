@@ -1,0 +1,8 @@
+[Unit]
+Description=Lance une sauvegarde du serveur minecraft tous les Jeudi
+
+[Timer]
+OnCalendar=Thu 03:00
+
+[Install]
+WantedBy=timers.target
