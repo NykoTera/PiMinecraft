@@ -8,7 +8,7 @@ This project is made for people that want to easily have a running server at hom
 *If you don't have much memory (if you have less than 1Gb memory), you can disable gui mode.*
 *Note that a 16Gb is a minimum size for the memory card*
 
----
+
 
 ## Prerequisite
 
@@ -16,7 +16,7 @@ This project is made for people that want to easily have a running server at hom
 2. You'll need the [latest java version](https://tecadmin.net/install-oracle-java-11-on-debian-9-stretch/)
 3. [Download the latest buildtools.jar to generate a spigot.jar file](https://www.spigotmc.org/wiki/buildtools/)
 
----
+
 
 ## Minecraft server
 
@@ -32,7 +32,7 @@ Remember that the first launch will build all the data needed by the server (map
 
 *My advice : Put your server in a dedicated folder*
 
----
+
 
 ## Systemd
 
@@ -47,24 +47,24 @@ It will help us in many things :
 
 Here are the 3 files :
 
-1. server.service : That's the service that launch your server when raspberry starts and that manage to properly stop the server when needed
-2. save.service : That's the service that will stop the server and launch the save script
-3. save.timer : that's the service that will automaticaly launch save.service (replace cronjob)
+1. `server.service` : That's the service that launch your server when raspberry starts and that manage to properly stop the server when needed
+2. `save.service` : That's the service that will stop the server and launch the save script
+3. `save.timer` : that's the service that will automaticaly launch save.service (replace cronjob)
 
-**It's important that the timer file have the same name as the service it will launch**
+**It's important that the `.timer` file have the same name as the `.service` to launch**
 
-*You can rename all the files as you wish, but the directory can only be /etc/systemd/system*
+*You can rename all the files as you wish, but the directory can only be* `/etc/systemd/system`
 
-You can modify *run.sh* file if you're using a raspberry pi 4. If you do that, you can allow the server to use more memory.
+You can modify `run.sh` file if you're using a raspberry pi 4. If you do that, you can allow the server to use more memory.
 
----
+
 
 ## The core script
 
-It's the script that's launched when the save.service is activated.
+It's the script that's launched when the `save.service` is activated.
 Its first goal is to copy you're server folder as an archive.
 
-Note that I haded some optional improvements to simplify my use of the server. All this improvements are optional :
+Note that I added some optional improvements to simplify my use of the server. All this improvements are optional :
 
 **1. Saving logs**
 
@@ -77,10 +77,10 @@ This functionality use the [dropbox_uploader](https://github.com/andreafabrizi/D
 
 **3. Automatic server update**
 
-Spigot offers the opportunity to build your spigot version. Using the buildtools tool, you can get the latest version.
+Spigot offers the opportunity to build your spigot version. Using the `buildtools.jar` tool, you can get the latest version.
 This functionality use the [buildtools](https://hub.spigotmc.org/jenkins/job/BuildTools/) script by spigot.
 
----
+
 
 ## Future developments
 
