@@ -43,7 +43,7 @@ It will help us in many things :
 2. Run automatic saves
 3. Stop the server when shuting down the raspberry
 
-*NB : all the systemd files will be put in the* '/etc/systemd/system' *directory*
+*NB : all the systemd files will be put in the* `/etc/systemd/system` *directory*
 
 Here are the 3 files :
 
