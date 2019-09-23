@@ -73,7 +73,7 @@ It could be usefull to save the server logs so I added a script line that save t
 **2. Uploading the latest saves on dropbox and keep the only 2 latest saves**
 
 For the save to be complete, I thought it could be interesting to have a server save on the internet. If the raspberry burn, you can still use the latest save !
-This functionality use the [dropbox_uploader](https://github.com/andreafabrizi/Dropbox-Uploader) script by @andrefabrizi.
+This functionality use the [dropbox_uploader](https://github.com/andreafabrizi/Dropbox-Uploader) script by [@andreafabrizi](https://github.com/andreafabrizi). 
 
 **3. Automatic server update**
 
