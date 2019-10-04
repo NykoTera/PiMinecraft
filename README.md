@@ -4,9 +4,9 @@
 
 This project is made for people that want to easily have a running server at home
 
-*Note that you'll need a raspberry pi runing las raspbian operating system*
+*Note that you'll need a raspberry pi runing last raspbian operating system*
 *If you don't have much memory (if you have less than 1Gb memory), you can disable gui mode.*
-*Note that a 16Gb is a minimum size for the memory card*
+*Note that 16Gb is a minimum size for the memory card*
 
 
 
@@ -23,14 +23,14 @@ This project is made for people that want to easily have a running server at hom
 **Before thinking to save a server, you'll have to setup your server**
 
 There are [lot of tutorial](https://www.makeuseof.com/tag/setup-minecraft-server-raspberry-pi/) on the internet on how to easily setup this kind on server.
-I'll only leave you the "run.sh" script. See the previous link for installation
+I'll only leave you the `run.sh` script. See the previous link for installation
 
-**For the latest spigot version, [please see Spigot wiki](https://www.spigotmc.org/wiki/buildtools/#latest). Remember that the saving script can help you.**
-**[You can fin more help for configuration and parameters on spigot wiki](https://www.spigotmc.org/wiki/spigot/)**
+**For the latest spigot version, [please see Spigot wiki](https://www.spigotmc.org/wiki/buildtools/#latest). Remember that the saving script can help you for updates.**
+**[You can find more help for configuration and parameters on spigot wiki](https://www.spigotmc.org/wiki/spigot/)**
 
 Remember that the first launch will build all the data needed by the server (map,...).
 
-*My advice : Put your server in a dedicated folder*
+*My advice : Put your server in a dedicated folder like "myServer".*
 
 
 
@@ -39,9 +39,9 @@ Remember that the first launch will build all the data needed by the server (map
 First, [you'll need to know what is systemd](https://wiki.debian.org/systemd).
 It will help us in many things :
 
-1. Run server when raspberry start
+1. Run the server when raspberry start
 2. Run automatic saves
-3. Stop the server when shuting down the raspberry
+3. Stop the server when shutting down the raspberry pi
 
 *NB : all the systemd files will be put in the* `/etc/systemd/system` *directory*
 
@@ -49,7 +49,7 @@ Here are the 3 files :
 
 1. `server.service` : That's the service that launch your server when raspberry starts and that manage to properly stop the server when needed
 2. `save.service` : That's the service that will stop the server and launch the save script
-3. `save.timer` : that's the service that will automaticaly launch save.service (replace cronjob)
+3. `save.timer` : that's the timer that will automaticaly launch save.service (replace cronjob)
 
 **It's important that the `.timer` file have the same name as the `.service` to launch**
 
@@ -73,7 +73,9 @@ It could be usefull to save the server logs so I added a script line that save t
 **2. Uploading the latest saves on dropbox and keep the only 2 latest saves**
 
 For the save to be complete, I thought it could be interesting to have a server save on the internet. If the raspberry burn, you can still use the latest save !
-This functionality use the [dropbox_uploader](https://github.com/andreafabrizi/Dropbox-Uploader) script by [@andreafabrizi](https://github.com/andreafabrizi). 
+This functionality use the [dropbox_uploader](https://github.com/andreafabrizi/Dropbox-Uploader) script by [@andreafabrizi](https://github.com/andreafabrizi).
+
+**Remember that all this scripts are launched as root, so you'll need to setup dropbox_uploader as root. A simple `sudo dropbox_uploader.sh` is enough.**
 
 **3. Automatic server update**
 
