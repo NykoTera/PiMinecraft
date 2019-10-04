@@ -86,4 +86,4 @@ This functionality use the [buildtools](https://hub.spigotmc.org/jenkins/job/Bui
 
 ## Future developments
 
-Actually, you'll have to download all the files and put it in th right folder manually. My goal is to develop a script that will download "install" this tools automatically. It will ask you the name of the different files, the folder directory,...
+You can actualy only use a new server, but I'll modify install.sh script to let you re-use your own existing server by downloading files.
