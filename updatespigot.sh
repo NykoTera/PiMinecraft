@@ -4,7 +4,7 @@
 #exec > /chemSave/temp.log 2>&1
 
 #   Path to dropbox_uploader
-pathUpload='/home/pi/Desktop/MinecraftServer/bin'
+pathUpload='/chemDrUp'
 
 #   Waiting proper Minecraft server ending
 sleep 10
