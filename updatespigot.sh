@@ -9,20 +9,17 @@ pathUpload='chemDrUp'
 #   Waiting proper Minecraft server ending
 sleep 10
 
-cd chemSave
 #   Saving Minecraft server in a .tar.gz archive
-tar -cvzf teraminesave-$(date +%Y%m%d-%H%M).tar.gz chemServ
+tar -cvzf chemSave/teraminesave-$(date +%Y%m%d-%H%M).tar.gz chemServ
 
-cd chemSpigot
 #   Clear Buildtools and download latest buildtools.jar
-ls | grep -v updatespigot.sh | sudo xargs rm -r
-sudo wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O BuildTools.jar
-sudo java -Xmx1024M -jar BuildTools.jar --rev 1.14.4
+rm -r chemSpigot
+sudo wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O chemSpigot/BuildTools.jar
+sudo java -Xmx1024M -jar chemSpigot/BuildTools.jar --rev 1.14.4
 
-#cd chemServ
 #   Saving the 2 latest minecraft logs and deleting former spigot.jar version
-sudo tar -cvzf chemSave/logsave/logsave-$(date +%Y%m%d-%H%M).tar.gz logs
-sudo rm spigot.jar logs -r
+sudo tar -cvzf chemSave/logsave/logsave-$(date +%Y%m%d-%H%M).tar.gz chemServ/logs
+sudo rm chemServ/spigot.jar chemServ/logs -r
 
 cd chemServ
 #   Deleting older logs and copying latest spigot.jar
