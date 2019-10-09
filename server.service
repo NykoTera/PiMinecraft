@@ -5,7 +5,7 @@ After=network.target
 [Service]
 Type=simple
 
-ExecStart=/usr/bin/screen -L -DmS minecraftserver /chemServ/run.sh
+ExecStart=/usr/bin/screen -L -DmS minecraftserver chemServ/run.sh
 
 ExecStop=/usr/bin/screen -p 0 -S minecraftserver -X stuff "save-all\015"
 ExecStop=/bin/sleep 5
