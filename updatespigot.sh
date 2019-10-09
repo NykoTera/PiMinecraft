@@ -13,7 +13,8 @@ sleep 10
 tar -cvzf chemSave/teraminesave-$(date +%Y%m%d-%H%M).tar.gz chemServ
 
 #   Clear Buildtools and download latest buildtools.jar
-rm -r chemSpigot
+shopt -s dotglob
+rm -rf chemSpigot/*
 sudo wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O chemSpigot/BuildTools.jar
 sudo java -Xmx1024M -jar chemSpigot/BuildTools.jar --rev 1.14.4
 
