@@ -6,7 +6,7 @@ Type=oneshot
 
 ExecStartPre=/bin/systemctl stop serverServ.service
 
-ExecStart=/chemSave/updatespigot.sh
+ExecStart=chemSave/updatespigot.sh
 
 [Install]
 WantedBy=multi-user.target
