@@ -31,6 +31,6 @@ sudo systemctl start serverServ.service
 sleep 10
 
 #   Conservation et upload sur la dropbox des 2 dernières sauvegardes
-find chemSave -type f -name '*tar*' -exec basename {} \; | sort -r | head -n-2 | xargs -I save rm chemSave/save
+find chemSave -type f -name '*tar*' -exec basename {} \; | sort -r | head -n-2 | xargs -I TOTO sudo rm chemSave/TOTO
 $pathUpload/dropbox_uploader.sh -q -d list / | awk "{print \$3}" | xargs -I TATA $pathUpload/dropbox_uploader.sh -d delete TATA
 find chemSave -type f -name '*tar*' -exec basename {} \; | sort | xargs -I TUTU $pathUpload/dropbox_uploader.sh -d upload chemSave/TUTU TUTU
