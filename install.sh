@@ -43,13 +43,15 @@ read saveServ
 
 if [ -d $chemSystem ]
 then
-ls installRepo | sed -rn "s/^save\.(.*)/mv '&' '$saveServ\.\1'/ p"
-ls installRepo | sed -rn "s/^server\.(.*)/mv '&' '$serverServ\.\1'/ p"
+ls installRepo | sed -rn "s/^save\.(.*)/mv '&' '$saveServ\.\1'/ p" | sh
+ls installRepo | sed -rn "s/^server\.(.*)/mv '&' '$serverServ\.\1'/ p" | sh
+cp $saveServ* $serverServ* $chemSystem
 else
 mkdir $chemSystem
 #cp installRepo/save* installRepo/server* $chemSystem
-ls installRepo | sed -rn "s/^save\.(.*)/mv '&' '$saveServ\.\1'/ p"
-ls installRepo | sed -rn "s/^server\.(.*)/mv '&' '$serverServ\.\1'/ p"
+ls installRepo | sed -rn "s/^save\.(.*)/mv '&' '$saveServ\.\1'/ p" | sh
+ls installRepo | sed -rn "s/^server\.(.*)/mv '&' '$serverServ\.\1'/ p" | sh
+cp $saveServ* $serverServ* $chemSystem
 fi
 
 echo 'Done'
