@@ -89,6 +89,12 @@ This functionality use the [buildtools](https://hub.spigotmc.org/jenkins/job/Bui
 You'll need to open a terminal and copy this command :
 `wget https://raw.githubusercontent.com/NykoTera/PiMinecraft/InstallTest/install.sh && bash install.sh`
 
+The script Will ask you a few things :
+1. Where you want to locate your server (by using a relative or an absolute path)
+2. Where you want to locate your save
+3. How you want to name the systemd file (`.service`)
+4. How you want to name the saves files (`.service` and `.timer`)
+
 
 
 ## Future developments
