@@ -46,7 +46,7 @@ then
 cp installRepo/server* installRepo/$serverServ* $chemSystem
 else
 mkdir $chemSystem
-cp installRepo/save* installRepo/$serverServ* $chemSystem
+cp installRepo/save* installRepo/$saveServ* $chemSystem
 fi
 
 echo 'Done'
