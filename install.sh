@@ -49,7 +49,7 @@ ls installRepo | sed -rn "s/^server\.(.*)/mv 'installRepo/&' '$chemSystem/$serve
 else
 mkdir $chemSystem
 ls installRepo | sed -rn "s/^save\.(.*)/mv installRepo/'&' installRepo/'$saveServ\.\1'/ p" | sh
-ls installRepo | sed -rn "s/^server\.(.*)/mv 'installRepo/'&' installRepo/'$serverServ\.\1'/ p" | sh
+ls installRepo | sed -rn "s/^server\.(.*)/mv installRepo/'&' installRepo/'$serverServ\.\1'/ p" | sh
 #cp $saveServ* $serverServ* $chemSystem
 fi
 
