@@ -84,6 +84,13 @@ This functionality use the [buildtools](https://hub.spigotmc.org/jenkins/job/Bui
 
 
 
+## How to use it
+
+You'll need to open a terminal and copy this command :
+`wget -O - https://github.com/NykoTera/PiMinecraft/blob/InstallTest/install.sh | sudo bash`
+
+
+
 ## Future developments
 
 You can actualy only use a new server, but I'll modify install.sh script to let you re-use your own existing server by downloading files.
