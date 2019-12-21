@@ -4,9 +4,9 @@
 
 This project is made for people that want to easily have a running server at home
 
-*Note that you'll need a raspberry pi runing las raspbian operating system*
+*Note that you'll need a raspberry pi runing last raspbian operating system.*
 *If you don't have much memory (if you have less than 1Gb memory), you can disable gui mode.*
-*Note that a 16Gb is a minimum size for the memory card*
+*Note that 16Gb is a minimum size for the memory card.*
 
 
 
