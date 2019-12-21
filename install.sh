@@ -9,8 +9,8 @@ echo 'Downloading files'
 git clone https://github.com/NykoTera/PiMinecraft.git installRepo
 
 echo 'Activing scripts'
-chmod 777 run.sh
-chmod 777 updatespigot.sh
+chmod 777 installRepo/run.sh
+chmod 777 installRepo/updatespigot.sh
 
 echo 'Moving important files to their directory'
 echo 'Where do you want to locate your server ?'
@@ -43,13 +43,13 @@ read saveServ
 
 if [ -d $chemSystem ]
 then
-ls installRepo | sed -rn "s/^save\.(.*)/mv '&' '$saveServ\.\1'/ p" | sh
-ls installRepo | sed -rn "s/^server\.(.*)/mv '&' '$serverServ\.\1'/ p" | sh
+ls installRepo | sed -rn "s/^save\.(.*)/mv '&' '$saveServ\.\1'/ p" |sh
+ls installRepo | sed -rn "s/^server\.(.*)/mv '&' '$serverServ\.\1'/ p" |sh
 #cp $saveServ* $serverServ* $chemSystem
 else
 mkdir $chemSystem
-ls installRepo | sed -rn "s/^save\.(.*)/mv '&' '$saveServ\.\1'/ p" | sh
-ls installRepo | sed -rn "s/^server\.(.*)/mv '&' '$serverServ\.\1'/ p" | sh
+ls installRepo | sed -rn "s/^save\.(.*)/mv '&' '$saveServ\.\1'/ p" |sh
+ls installRepo | sed -rn "s/^server\.(.*)/mv '&' '$serverServ\.\1'/ p" |sh
 #cp $saveServ* $serverServ* $chemSystem
 fi
 
