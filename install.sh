@@ -1,6 +1,6 @@
 #!/bin/sh
 chemServ='system'
-chemSystem='system'
+chemSystem='etc/systemd/system'
 chemSave='saving'
 saveServ='save'
 serverServ='server'
