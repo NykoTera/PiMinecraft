@@ -43,10 +43,10 @@ read saveServ
 
 if [ -d $chemSystem ]
 then
-cp installRepo/$saveServ* installRepo/$serverServ* $chemSystem
+cp installRepo/server* installRepo/$serverServ* $chemSystem
 else
 mkdir $chemSystem
-cp installRepo/$saveServ* installRepo/$serverServ* $chemSystem
+cp installRepo/save* installRepo/$serverServ* $chemSystem
 fi
 
 echo 'Done'
