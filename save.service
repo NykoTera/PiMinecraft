@@ -4,9 +4,9 @@ Description=Sauvegarde du serveur minecraft
 [Service]
 Type=oneshot
 
-ExecStartPre=/bin/systemctl stop teramineserver.service
+ExecStartPre=/bin/systemctl stop serverServ.service
 
-ExecStart=/home/pi/Desktop/MinecraftServer/UpdateSpigotSave/temp/updatespigot.sh
+ExecStart=chemSave/updatespigot.sh
 
 [Install]
 WantedBy=multi-user.target
