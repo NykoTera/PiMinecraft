@@ -45,12 +45,10 @@ if [ -d $chemSystem ]
 then
 ls installRepo | sed -rn "s/^save\.(.*)/mv 'installRepo\/&' '$chemSystem\/$saveServ\.\1'/ p" |sh
 ls installRepo | sed -rn "s/^server\.(.*)/mv 'installRepo\/&' '$chemSystem\/$serverServ\.\1'/ p" |sh
-#cp $saveServ* $serverServ* $chemSystem
 else
 mkdir $chemSystem
 ls installRepo | sed -rn "s/^save\.(.*)/mv 'installRepo\/&' '$chemSystem\/$saveServ\.\1'/ p" |sh
 ls installRepo | sed -rn "s/^server\.(.*)/mv 'installRepo\/&' '$chemSystem\/$serverServ\.\1'/ p" |sh
-#cp $saveServ* $serverServ* $chemSystem
 fi
 
 echo 'Done'
