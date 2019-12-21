@@ -87,7 +87,7 @@ This functionality use the [buildtools](https://hub.spigotmc.org/jenkins/job/Bui
 ## How to use it
 
 You'll need to open a terminal and copy this command :
-`wget -O - https://github.com/NykoTera/PiMinecraft/blob/InstallTest/install.sh | sudo bash`
+`wget -O - https://raw.githubusercontent.com/NykoTera/PiMinecraft/InstallTest/install.sh| sudo bash`
 
 
 
