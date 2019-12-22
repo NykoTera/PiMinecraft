@@ -24,7 +24,7 @@ mkdir $chemspigot
 fi
 
 echo 'Downloading files...' 
-git clone -b InstallTest --single-branch https://github.com/NykoTera/PiMinecraft.git installRepo
+git clone -b InstallTest-2 --single-branch https://github.com/NykoTera/PiMinecraft.git installRepo
 git clone https://github.com/andreafabrizi/Dropbox-Uploader.git $chemdrup
 
 echo 'Activing scripts...'
@@ -106,14 +106,14 @@ Which kinf of files would you use ?
 \t D -- \t I want to download an existing server files (tar.gz)
 \t M -- \t I want to use my own files (manual)
 
-What's your choice ? 1,2 or 3 ? \c"
+What's your choice ? N,D or M ? \c"
 read installchoice
 clear
 case "$installchoice" in
 [Nn]*) echo "lancer le serveur (suite)" ;;
-[Dd]*) echo "Downloaf file from url...";;
+[Dd]*) echo "Download file from url...";;
 [Mm]*) echo "on ne lance pas le serveur à la fin";;
-*) echo "Please, choose 1,2 or 3";;
+*) echo "Please, choose N,D or M";;
 esac
 done
 
