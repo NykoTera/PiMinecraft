@@ -75,14 +75,14 @@ cp installRepo/server.service installRepo/$serverserv.service
 
 echo "Generating links..."
 sed -i -e "s?chemDrUp?"`pwd`"/$chemdrup?g" installRepo/updatespigot.sh
-sed -i -e "s/chemSpigot/$(pwd)\/$chemspigot/g" installRepo/updatespigot.sh
-sed -i -e "s/serverServ/$(pwd)\/$serverserv/g" installRepo/updatespigot.sh
-sed -i -e "s/chemServ/$(pwd)\/$chemserv/g" installRepo/updatespigot.sh
-sed -i -e "s/chemSave/$(pwd)\/$chemsave/g" installRepo/updatespigot.sh
-sed -i -e "s/serverServ/$(pwd)\/$serverserv/g" installRepo/*.service
-sed -i -e "s/chemServ/$(pwd)\/$chemserv/g" installRepo/*.service
-sed -i -e "s/chemSave/$(pwd)\/$chemsave/g" installRepo/*.service
-sed -i -e "s/chemServ/$(pwd)\/$chemserv/g" installRepo/run.sh
+sed -i -e "s?chemSpigot?"`pwd`"/$chemspigot?g" installRepo/updatespigot.sh
+sed -i -e "s?serverServ"`pwd`"/$serverserv?g" installRepo/updatespigot.sh
+sed -i -e "s?chemServ?"`pwd`"/$chemserv?g" installRepo/updatespigot.sh
+sed -i -e "s?chemSave?"`pwd`"/$chemsave?g" installRepo/updatespigot.sh
+sed -i -e "s?serverServ?"`pwd`"/$serverserv?g" installRepo/*.service
+sed -i -e "s?chemServ?"`pwd`"/$chemserv?g" installRepo/*.service
+sed -i -e "s?chemSave?"`pwd`"/$chemsave?g" installRepo/*.service
+sed -i -e "s?chemServ?"`pwd`"/$chemserv?g" installRepo/run.sh
 
 echo "Installing files..."
 cp installRepo/run.sh $chemserv
