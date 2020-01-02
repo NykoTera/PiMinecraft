@@ -6,7 +6,7 @@ chemdrup='DropboxUploader'
 chemspigot='spigotDir'
 saveserv='save'
 serverserv='server'
-installchoice='N'
+installchoice='1'
 
 echo 'Initializing... '
 
@@ -24,7 +24,7 @@ mkdir $chemspigot
 fi
 
 echo 'Downloading files...' 
-git clone -b InstallTest-2 --single-branch https://github.com/NykoTera/PiMinecraft.git installRepo
+git clone -b InstallTest --single-branch https://github.com/NykoTera/PiMinecraft.git installRepo
 git clone https://github.com/andreafabrizi/Dropbox-Uploader.git $chemdrup
 
 echo 'Activing scripts...'
@@ -74,15 +74,15 @@ cp installRepo/save.timer installRepo/$saveserv.timer
 cp installRepo/server.service installRepo/$serverserv.service
 
 echo "Generating links..."
-sed -i -e "s?chemDrUp?"`pwd`"/$chemdrup?g" installRepo/updatespigot.sh
-sed -i -e "s?chemSpigot?"`pwd`"/$chemspigot?g" installRepo/updatespigot.sh
-sed -i -e "s?serverServ?"`pwd`"/$serverserv?g" installRepo/updatespigot.sh
-sed -i -e "s?chemServ?"`pwd`"/$chemserv?g" installRepo/updatespigot.sh
-sed -i -e "s?chemSave?"`pwd`"/$chemsave?g" installRepo/updatespigot.sh
-sed -i -e "s?serverServ?"`pwd`"/$serverserv?g" installRepo/*.service
-sed -i -e "s?chemServ?"`pwd`"/$chemserv?g" installRepo/*.service
-sed -i -e "s?chemSave?"`pwd`"/$chemsave?g" installRepo/*.service
-sed -i -e "s?chemServ?"`pwd`"/$chemserv?g" installRepo/run.sh
+sed -i -e "s/chemDrUp/$chemdrup/g" installRepo/updatespigot.sh
+sed -i -e "s/chemSpigot/$chemspigot/g" installRepo/updatespigot.sh
+sed -i -e "s/serverServ/$serverserv/g" installRepo/updatespigot.sh
+sed -i -e "s/chemServ/$chemserv/g" installRepo/updatespigot.sh
+sed -i -e "s/chemSave/$chemsave/g" installRepo/updatespigot.sh
+sed -i -e "s/serverServ/$serverserv/g" installRepo/*.service
+sed -i -e "s/chemServ/$chemserv/g" installRepo/*.service
+sed -i -e "s/chemSave/$chemsave/g" installRepo/*.service
+sed -i -e "s/chemServ/$chemserv/g" installRepo/run.sh
 
 echo "Installing files..."
 cp installRepo/run.sh $chemserv
@@ -106,14 +106,14 @@ Which kinf of files would you use ?
 \t D -- \t I want to download an existing server files (tar.gz)
 \t M -- \t I want to use my own files (manual)
 
-What's your choice ? N,D or M ? \c"
+What's your choice ? 1,2 or 3 ? \c"
 read installchoice
 clear
 case "$installchoice" in
 [Nn]*) echo "lancer le serveur (suite)" ;;
-[Dd]*) echo "Download file from url...";;
+[Dd]*) echo "Downloaf file from url...";;
 [Mm]*) echo "on ne lance pas le serveur à la fin";;
-*) echo "Please, choose N,D or M";;
+*) echo "Please, choose 1,2 or 3";;
 esac
 done
 
