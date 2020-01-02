@@ -90,10 +90,12 @@ You'll need to open a terminal and copy this command :
 `wget https://raw.githubusercontent.com/NykoTera/PiMinecraft/InstallTest-2/install.sh && bash install.sh`
 
 The script Will ask you a few things :
-1. Where you want to locate your server (by using a relative or an absolute path)
-2. Where you want to locate your save
-3. How you want to name the systemd file (`.service`)
-4. How you want to name the saves files (`.service` and `.timer`)
+1. Where you want to download DropboxUploader (by using a relative path) 
+2. Where you want to put spigot temporary files (by using a relative path)
+3. Where you want to locate your server (by using a relative path)
+4. Where you want to locate your save (by using a relative path)
+5. How you want to name the systemd file (`.service`)
+6. How you want to name the saves files (`.service` and `.timer`)
 
 
 
