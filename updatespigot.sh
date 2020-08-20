@@ -16,7 +16,7 @@ tar -cvzf chemSave/teraminesave-$(date +%Y%m%d-%H%M).tar.gz chemServ
 shopt -s dotglob
 rm -rf chemSpigot/*
 sudo wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O chemSpigot/BuildTools.jar
-sudo java -Xmx1024M -jar chemSpigot/BuildTools.jar --rev 1.14.4
+sudo java -Xmx1024M -jar chemSpigot/BuildTools.jar --rev 1.16.1
 
 #   Saving the 2 latest minecraft logs and deleting former spigot.jar version
 sudo tar -cvzf chemSave/logsave/logsave-$(date +%Y%m%d-%H%M).tar.gz chemServ/logs
