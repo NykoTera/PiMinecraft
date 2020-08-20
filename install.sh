@@ -1,6 +1,6 @@
 #!/bin/sh
 chemserv='server'
-chemsystem='system'
+chemsystem='etc/systemd/system'
 chemsave='saving'
 chemdrup='DropboxUploader'
 chemspigot='spigotDir'
@@ -54,14 +54,6 @@ mkdir $chemsave/logsave
 fi
 
 echo "Preparing systemd files..."
-
-# a supprimer pour la release
-if [ -d "$chemsystem" ]
-then
-echo  "$chemsystem directory already existing"
-else
-mkdir $chemsystem
-fi
 
 echo 'How would you name your .service file ? '
 read serverserv
