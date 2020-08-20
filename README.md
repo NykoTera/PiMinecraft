@@ -90,10 +90,21 @@ You'll need to open a terminal and copy this command :
 `wget https://raw.githubusercontent.com/NykoTera/PiMinecraft/InstallTest/install.sh && bash install.sh`
 
 The script Will ask you a few things :
-1. Where you want to locate your server (by using a relative or an absolute path)
-2. Where you want to locate your save
-3. How you want to name the systemd file (`.service`)
-4. How you want to name the saves files (`.service` and `.timer`)
+1. Where you want to download and install dropbox_uploader
+2. Where spigot will create temporary files
+3. Where you want to locate your server (by using a relative or an absolute path)
+4. Where you want to locate your save
+5. How you want to name the systemd file (`.service`)
+6. How you want to name the saves files (`.service` and `.timer`)
+
+When the script will end you'll have to end manually :
+1. Setting up dropbox_uploader : open a terminal and type `sudo dropbox_uploader.sh` and follow instructions
+2. Download buildtools : `sudo wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O xxxx/BuildTools.jar` (replace `xxxx` by the path to the spigot folder)
+3. Launch buildtools : `sudo java -Xmx1024M -jar xxxx/BuildTools.jar --rev 1.16.1` you can change memory (-Xmx) and version (--rev) to match your needs ([please see Spigot wiki for further details](https://www.spigotmc.org/wiki/buildtools/#latest))
+4. Copy spigot to your server folder : `cp xxxx/spigot-* yyyy/spigot.jar` (replace `yyyy` by the path to the server folder)
+5. Finaly, launch your server : `run.sh`
+
+*If you want to use an existing server, replace the folders an files create on your raspberry by your own files and folders.*
 
 
 
