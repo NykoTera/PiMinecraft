@@ -84,6 +84,9 @@ echo "Removing install files..."
 rm -r installRepo
 
 echo "Initializing additional tools..."
+systemctl enable $serverserv.service
+systemctl enable $saveserv.timer
+systemctl --system daemon-reload
 #wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O $chemspigot/BuildTools.jar
 #java -Xmx1024M -jar $chemspigot/BuildTools.jar --rev 1.14.4
 #cp $chemspigot/spigot-* $chemserv/spigot.jar
