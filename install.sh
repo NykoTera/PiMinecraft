@@ -97,4 +97,3 @@ systemctl --system daemon-reload
 #$chemdrup/dropbox_uploader.sh
 
 echo 'Done'
-rm install.sh
