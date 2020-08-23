@@ -65,18 +65,18 @@ cp installRepo/save.timer installRepo/$saveserv.timer
 cp installRepo/server.service installRepo/$serverserv.service
 
 echo "Generating links..."
-sed -i -e "s,chemdrup,${chemdrup},g" installRepo/updatespigot.sh
-sed -i -e "s,chemspigot,${chemspigot},g" installRepo/updatespigot.sh
-sed -i -e "s,serverserv,${serverserv},g" installRepo/updatespigot.sh
-sed -i -e "s,chemserv,${chemserv},g" installRepo/updatespigot.sh
-sed -i -e "s,chemsave,${chemsave},g" installRepo/updatespigot.sh
-sed -i -e "s,serverserv,${serverserv},g" installRepo/$serverserv.service
-sed -i -e "s,serverserv,${serverserv},g" installRepo/$saveserv.service
-sed -i -e "s,chemserv,${chemserv},g" installRepo/$serverserv.service
-sed -i -e "s,chemserv,${chemserv},g" installRepo/$saveserv.service
-sed -i -e "s,chemsave,${chemsave},g" installRepo/$serverserv.service
-sed -i -e "s,chemsave,${chemsave},g" installRepo/$saveserv.service
-sed -i -e "s,chemserv,${chemserv},g" installRepo/run.sh
+sed -ie 's,chemdrup,'${chemdrup}',g' installRepo/updatespigot.sh
+sed -ie 's,chemspigot,'${chemspigot}',g' installRepo/updatespigot.sh
+sed -ie 's,serverserv,'${serverserv}',g' installRepo/updatespigot.sh
+sed -ie 's,chemserv,'${chemserv}',g' installRepo/updatespigot.sh
+sed -ie 's,chemsave,'${chemsave}',g' installRepo/updatespigot.sh
+sed -ie 's,serverserv,'${serverserv}',g' installRepo/$serverserv.service
+sed -ie 's,serverserv,'${serverserv}',g' installRepo/$saveserv.service
+sed -ie 's,chemserv,'${chemserv}',g' installRepo/$serverserv.service
+sed -ie 's,chemserv,'${chemserv}',g' installRepo/$saveserv.service
+sed -ie 's,chemsave,'${chemsave}',g' installRepo/$serverserv.service
+sed -ie 's,chemsave,'${chemsave}',g' installRepo/$saveserv.service
+sed -ie 's,chemserv,'${chemserv}',g' installRepo/run.sh
 
 echo "Installing files..."
 cp installRepo/run.sh $chemserv
