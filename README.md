@@ -98,10 +98,10 @@ The script Will ask you a few things :
 6. How you want to name the saves files (`.service` and `.timer`)
 
 When the script will end you'll have to end manually :
-1. Setting up dropbox_uploader : open a terminal and type `sudo dropbox_uploader.sh` and follow instructions
-2. Download buildtools : `sudo wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O xxxx/BuildTools.jar` (replace `xxxx` by the path to the spigot folder)
-3. Launch buildtools : `sudo java -Xmx1024M -jar xxxx/BuildTools.jar --rev 1.16.1` you can change memory (-Xmx) and version (--rev) to match your needs ([please see Spigot wiki for further details](https://www.spigotmc.org/wiki/buildtools/#latest))
-4. Copy spigot to your server folder : `cp xxxx/spigot-* yyyy/spigot.jar` (replace `yyyy` by the path to the server folder)
+1. Setting up dropbox_uploader : open a terminal and type `sudo xxxx/dropbox_uploader.sh` and follow instructions (replace `xxxx` by the path to the dropbox_uploader folder). [Please see Dropbox-Uploader github page for further details](https://github.com/andreafabrizi/Dropbox-Uploader)
+2. Download buildtools : `sudo wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O yyyy/BuildTools.jar` (replace `yyyy` by the path to the spigot folder)
+3. Launch buildtools : `sudo java -Xmx1024M -jar xxxx/BuildTools.jar --rev 1.16.1` you can change memory (-Xmx) and version (--rev) to match your needs (replace `yyyy` by the path to the spigot folder)[Please see Spigot wiki for further details about versions](https://www.spigotmc.org/wiki/buildtools/#latest)
+4. Copy spigot to your server folder : `cp yyyy/spigot-* zzzz/spigot.jar` (replace `yyyy` by the path to the spigot folder and `zzzz` by the path to the server folder)
 5. Finaly, launch your server : `run.sh`
 
 *If you want to use an existing server, replace the folders and files created on your raspberry by your own files and folders.*
