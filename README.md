@@ -104,7 +104,7 @@ When the script will end you'll have to end manually :
 4. Copy spigot to your server folder : `cp xxxx/spigot-* yyyy/spigot.jar` (replace `yyyy` by the path to the server folder)
 5. Finaly, launch your server : `run.sh`
 
-*If you want to use an existing server, replace the folders an files create on your raspberry by your own files and folders.*
+*If you want to use an existing server, replace the folders and files created on your raspberry by your own files and folders.*
 
 
 
