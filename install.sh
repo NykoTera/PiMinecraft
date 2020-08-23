@@ -70,9 +70,12 @@ sed -i -e "s/chemSpigot/$chemspigot/g" installRepo/updatespigot.sh
 sed -i -e "s/serverServ/$serverserv/g" installRepo/updatespigot.sh
 sed -i -e "s/chemServ/$chemserv/g" installRepo/updatespigot.sh
 sed -i -e "s/chemSave/$chemsave/g" installRepo/updatespigot.sh
-sed -i -e "s/serverServ/$serverserv/g" installRepo/*.service
-sed -i -e "s/chemServ/$chemserv/g" installRepo/*.service
-sed -i -e "s/chemSave/$chemsave/g" installRepo/*.service
+sed -i -e "s/serverServ/$serverserv/g" installRepo/$serverserv.service
+sed -i -e "s/serverServ/$serverserv/g" installRepo/$saveserv.service
+sed -i -e "s/chemServ/$chemserv/g" installRepo/$serverserv.service
+sed -i -e "s/chemServ/$chemserv/g" installRepo/$saveserv.service
+sed -i -e "s/chemSave/$chemsave/g" installRepo/$serverserv.service
+sed -i -e "s/chemSave/$chemsave/g" installRepo/$saveserv.service
 sed -i -e "s/chemServ/$chemserv/g" installRepo/run.sh
 
 echo "Installing files..."
