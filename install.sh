@@ -1,6 +1,6 @@
 #!/bin/sh
 chemserv='server'
-chemsystem='etc/systemd/system'
+chemsystem='/etc/systemd/system'
 chemsave='saving'
 chemdrup='DropboxUploader'
 chemspigot='spigotDir'
