@@ -4,9 +4,9 @@ Description=Sauvegarde du serveur minecraft
 [Service]
 Type=oneshot
 
-ExecStartPre=/bin/systemctl stop serverServ.service
+ExecStartPre=/bin/systemctl stop serverserv.service
 
-ExecStart=chemSave/updatespigot.sh
+ExecStart=chemsave/updatespigot.sh
 
 [Install]
 WantedBy=multi-user.target
