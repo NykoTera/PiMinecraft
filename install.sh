@@ -60,9 +60,9 @@ read serverserv
 echo 'How would you name your automatic saving service ? '
 read saveserv
 
-cp installRepo/save.service installRepo/$saveserv.service
-cp installRepo/save.timer installRepo/$saveserv.timer
-cp installRepo/server.service installRepo/$serverserv.service
+cp installRepo/save.service $chemsystem/$saveserv.service
+cp installRepo/save.timer $chemsystem/$saveserv.timer
+cp installRepo/server.service $chemsystem/$serverserv.service
 
 echo "Generating links..."
 sed -i -e "s/chemDrUp/$chemdrup/g" installRepo/updatespigot.sh
