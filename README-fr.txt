@@ -99,8 +99,8 @@ Une fois le script terminé, vous devrez compléter l'installation par quelques 
 1. Paramétrer dropbox_uploader : ouvrez un terminal et entrez `sudo xxxx/dropbox_uploader.sh` puis suivez les instructions (remplacez `xxxx` par le chemin du dossier dropbox_uploader). [Reportez-vous au github de Dropbox-uploader pour plus d'informations](https://github.com/andreafabrizi/Dropbox-Uploader)
 2. Téléchargez BuildTools : `sudo wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O yyyy/BuildTools.jar` (remplacez `yyyy` par le chemin du dossier spigot)
 3. Lancez BuildTools : `cd yyyy`puis `sudo java -Xmx1024M -jar BuildTools.jar --rev 1.16.1` vous pouvez modifier la mémoire (-Xmx) ou la version de minecraft (--rev) suivant vos besoins (remplacez `yyyy` par le chemin du dossier spigot) [Reportez-vous au wiki Spigot pour plus de détails concernant les versions supportées](https://www.spigotmc.org/wiki/buildtools/#latest)
-4. Copiez le fichier spigot.jar dans le dossier du serveur : `cp spigot-* zzzz/spigot.jar` (remplacez `yyyy` par le chemin du dossier spigot et `zzzz` par le chemin du dossier du serveur)
-5. Pour finir, lancez votre serveur : `cd zzzz` puis `run.sh` (remplacez `zzzz` par le chemin du dossier du serveur). Une autre méthode consiste à utiliser les commandes systemd : `systemctl start yourservice.service` **(pensez à lancer le service du serveur et non celui de la sauvegarde !)**
+4. Copiez le fichier spigot.jar dans le dossier du serveur : `sudo cp spigot-* zzzz/spigot.jar` (remplacez `yyyy` par le chemin du dossier spigot et `zzzz` par le chemin du dossier du serveur)
+5. Pour finir, lancez votre serveur : `sh zzz/run.sh` (remplacez `zzzz` par le chemin du dossier du serveur). Une autre méthode consiste à utiliser les commandes systemd : `systemctl start yourservice.service` **(pensez à lancer le service du serveur et non celui de la sauvegarde !)**
 
 *Si vous voulez utiliser un serveur déjà existant, vous devrez transférer vos données vers le raspberry et remplacer les données créées par le serveur.*
 
