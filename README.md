@@ -102,7 +102,7 @@ When the script will end you'll have to end manually :
 2. Download buildtools : `sudo wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O yyyy/BuildTools.jar` (replace `yyyy` by the path to the spigot folder)
 3. Launch buildtools : `cd yyyy`and then `sudo java -Xmx1024M -jar BuildTools.jar --rev 1.16.1` you can change memory (-Xmx) and version (--rev) to match your needs (replace `yyyy` by the path to the spigot folder) [Please see Spigot wiki for further details about versions](https://www.spigotmc.org/wiki/buildtools/#latest)
 4. Copy spigot to your server folder : `cp spigot-* zzzz/spigot.jar` (replace `yyyy` by the path to the spigot folder and `zzzz` by the path to the server folder)
-5. Finaly, launch your server : `cd pppp`and then `run.sh` (replace `pppp` by the path to the server folder). An other way to launch your server is by using systemctl command : `systemctl start yourservice.service` **(launch the server service, not the save service !)**
+5. Finaly, launch your server : `cd pppp` and then `run.sh` (replace `pppp` by the path to the server folder). An other way to launch your server is by using systemctl command : `systemctl start yourservice.service` **(launch the server service, not the save service !)**
 
 *If you want to use an existing server, replace the folders and files created on your raspberry by your own files and folders.*
 
