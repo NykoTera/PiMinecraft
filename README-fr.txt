@@ -1,10 +1,10 @@
 # PiMinecraftAuto
 
-**Voici la méthode facile (et automatique) de configurer et faire fonctionner un serveur minecraft sur raspberry pi**
+**Voici la méthode facile (et automatique) pour configurer et faire fonctionner un serveur minecraft sur raspberry pi**
 
 Ce projet est fait pour ceux qui veulent facilement disposer d'un serveur à domicile
 
-*Veuillez noter que vous aurez besoin d'un raspberry fonctionnant sous une version à jour de raspbian*
+*Veuillez noter que vous aurez besoin d'un raspberry pi (3 ou ultérieur) fonctionnant sous une version à jour de raspbian*
 *Si vous avez peu de mémoire vive (environ 1Gb ou moins), vous pouvez désactiver l'interface graphique de raspbian.*
 *Je recommande une carte SD d'au moins 16Gb*
 
@@ -13,7 +13,7 @@ Ce projet est fait pour ceux qui veulent facilement disposer d'un serveur à dom
 ## Prérequis
 
 1. Vous devez vous assurer de disposer de la  [dernière version de raspbian](https://www.raspberrypi.org/documentation/raspbian/updating.md)
-2. Vous aurez besoin de la [dernière version de java](https://tecadmin.net/install-oracle-java-11-on-debian-9-stretch/)
+2. Vous aurez besoin de la [dernière version de java](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-debian-10)
 3. [Téléchargez le dernier buildtools.jar pour générer un fichier spigot.jar](https://www.spigotmc.org/wiki/buildtools/)
 
 
