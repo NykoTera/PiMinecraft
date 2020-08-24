@@ -111,4 +111,4 @@ Notez que la première fois que vous lancerez le serveur vous aurez ce message :
 
 ## A venir (en réflexion du moins...)
 
-Pour le moment vous pouvez seulement créer un nouveau serveur, mais je vais le modifier pour vous permettre de réutiliser vos propres serveurs, quitte à les télécharger.
+Pour le moment vous pouvez seulement créer un nouveau serveur, mais je vais modifier le script pour vous permettre de réutiliser vos propres serveurs, quitte à les télécharger.
