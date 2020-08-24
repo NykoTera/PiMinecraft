@@ -14,7 +14,8 @@ This project is made for people that want to easily have a running server at hom
 
 1. You'll need to ensure you're running the [latest raspbian version](https://www.raspberrypi.org/documentation/raspbian/updating.md)
 2. You'll need the [latest java version](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-debian-10)
-3. [Download the latest buildtools.jar to generate a spigot.jar file](https://www.spigotmc.org/wiki/buildtools/)
+3. You'll need screen to be installed : `sudo apt-get install screen`
+4. [Download the latest buildtools.jar to generate a spigot.jar file](https://www.spigotmc.org/wiki/buildtools/)
 
 
 
