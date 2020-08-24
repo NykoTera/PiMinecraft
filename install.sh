@@ -91,7 +91,9 @@ systemctl enable $serverserv.service
 systemctl enable $saveserv.timer
 systemctl --system daemon-reload
 #wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O $chemspigot/BuildTools.jar
-#java -Xmx1024M -jar $chemspigot/BuildTools.jar --rev 1.14.4
+#cd $chemspigot
+#java -Xmx1024M -jar $chemspigot/BuildTools.jar --rev 1.16.1
+#cd
 #cp $chemspigot/spigot-* $chemserv/spigot.jar
 
 #$chemdrup/dropbox_uploader.sh
