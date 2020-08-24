@@ -1,4 +1,5 @@
 #!/bin/sh
+
 chemserv='server'
 chemsystem='/etc/systemd/system'
 chemsave='saving'
@@ -6,6 +7,7 @@ chemdrup='DropboxUploader'
 chemspigot='spigotDir'
 saveserv='save'
 serverserv='server'
+
 
 echo 'Initializing... '
 
@@ -23,7 +25,7 @@ mkdir $chemspigot
 fi
 
 echo 'Downloading files...' 
-git clone -b InstallTest --single-branch https://github.com/NykoTera/PiMinecraft.git installRepo
+git clone -b master --single-branch https://github.com/NykoTera/PiMinecraft.git installRepo
 git clone https://github.com/andreafabrizi/Dropbox-Uploader.git $chemdrup
 
 echo 'Activing scripts...'
