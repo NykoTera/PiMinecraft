@@ -87,8 +87,9 @@ This functionality use the [buildtools](https://hub.spigotmc.org/jenkins/job/Bui
 
 ## How to use it
 
+*You can use `sudo su` instead of using sudo*
 You'll need to open a terminal and copy this command :
-`wget https://raw.githubusercontent.com/NykoTera/PiMinecraft/InstallTest/install.sh && bash install.sh && rm install.sh`
+`sudo wget https://raw.githubusercontent.com/NykoTera/PiMinecraft/InstallTest/install.sh && bash install.sh && rm install.sh`
 
 The script Will ask you a few things :
 1. Where you want to download and install dropbox_uploader
