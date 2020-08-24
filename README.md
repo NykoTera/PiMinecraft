@@ -13,8 +13,9 @@ This project is made for people that want to easily have a running server at hom
 ## Prerequisite
 
 1. You'll need to ensure you're running the [latest raspbian version](https://www.raspberrypi.org/documentation/raspbian/updating.md)
-2. You'll need the [latest java version](https://tecadmin.net/install-oracle-java-11-on-debian-9-stretch/)
-3. [Download the latest buildtools.jar to generate a spigot.jar file](https://www.spigotmc.org/wiki/buildtools/)
+2. You'll need the [latest java version](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-debian-10)
+3. You'll need screen to be installed : `sudo apt-get install screen`
+4. [Download the latest buildtools.jar to generate a spigot.jar file](https://www.spigotmc.org/wiki/buildtools/)
 
 
 
@@ -86,14 +87,27 @@ This functionality use the [buildtools](https://hub.spigotmc.org/jenkins/job/Bui
 
 ## How to use it
 
+*You can use `sudo su` instead of using sudo*
 You'll need to open a terminal and copy this command :
-`wget https://raw.githubusercontent.com/NykoTera/PiMinecraft/master/install.sh && bash install.sh`
+`sudo wget https://raw.githubusercontent.com/NykoTera/PiMinecraft/master/install.sh && bash install.sh && rm install.sh`
 
 The script Will ask you a few things :
-1. Where you want to locate your server (by using a relative or an absolute path)
-2. Where you want to locate your save (by using a relative or an absolute path)
-3. How you want to name the systemd file (`.service`)
-4. How you want to name the saves files (`.service` and `.timer`)
+1. Where you want to download and install dropbox_uploader
+2. Where spigot will create temporary files
+3. Where you want to locate your server (by using a relative or an absolute path)
+4. Where you want to locate your save
+5. How you want to name the systemd file (`.service`)
+6. How you want to name the saves files (`.service` and `.timer`)
+
+When the script will end you'll have to end manually :
+1. Setting up dropbox_uploader : open a terminal and type `sudo xxxx/dropbox_uploader.sh` and follow instructions (replace `xxxx` by the path to the dropbox_uploader folder). [Please see Dropbox-Uploader github page for further details](https://github.com/andreafabrizi/Dropbox-Uploader)
+2. Download buildtools : `sudo wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O yyyy/BuildTools.jar` (replace `yyyy` by the path to the spigot folder)
+3. Launch buildtools : `cd yyyy`and then `sudo java -Xmx1024M -jar BuildTools.jar --rev 1.16.1` you can change memory (-Xmx) and version (--rev) to match your needs (replace `yyyy` by the path to the spigot folder) [Please see Spigot wiki for further details about versions](https://www.spigotmc.org/wiki/buildtools/#latest)
+4. Copy spigot to your server folder : `sudo cp spigot-* zzzz/spigot.jar` (replace `yyyy` by the path to the spigot folder and `zzzz` by the path to the server folder)
+5. Finaly, launch your server : `cd zzzz` and then `sudo sh run.sh` (replace `zzzz` by the path to the server folder).
+Note that the first time you launch your server it will return this message : `You need to agree to the EULA in order to run the server. Go to eula.txt for more info`. All you have to do now is to modify this eula.txt file : `sudo nano eula.txt` and replace `eula=false` by `eula=true`. To close nano, press ctrl + X, type Y to validate changes and press enter to keep the file's name. You can now relaunch your server `sudo sh run.sh`. At this point, another way to launch your server is by using systemctl command : `sudo systemctl start yourservice.service` **(launch the server service, not the save service !)**)
+
+*If you want to use an existing server, replace the folders and files created on your raspberry by your own files and folders.*
 
 
 
