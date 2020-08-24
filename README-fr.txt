@@ -87,8 +87,9 @@ Cette fonctionalité nécessite l'usage du script [buildtools](https://hub.spigo
 
 ## Comment mettre en place la sauvegarde automatique
 
-Il vpus faudra ouvrir un terminal et copier cette commande :
-`wget https://raw.githubusercontent.com/NykoTera/PiMinecraft/InstallTest/install.sh && bash install.sh`
+*Vous pouvez utiliser `sudo su` au lieu de retaper sudo à chaques fois*
+Il vous faudra ouvrir un terminal et copier cette commande :
+`sudo wget https://raw.githubusercontent.com/NykoTera/PiMinecraft/InstallTest/install.sh && bash install.sh`
 
 Le script vous demandera :
 1. Où vous voulez locamiser votre serveur (en utilisant un chemin relatif ou absolu)
