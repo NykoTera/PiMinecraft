@@ -14,7 +14,8 @@ Ce projet est fait pour ceux qui veulent facilement disposer d'un serveur à dom
 
 1. Vous devez vous assurer de disposer de la  [dernière version de raspbian](https://www.raspberrypi.org/documentation/raspbian/updating.md)
 2. Vous aurez besoin de la [dernière version de java](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-debian-10)
-3. [Téléchargez le dernier buildtools.jar pour générer un fichier spigot.jar](https://www.spigotmc.org/wiki/buildtools/)
+3. Assurez-vous que screen est bien installé : `sudo apt-get install screen`
+4. [Téléchargez le dernier buildtools.jar pour générer un fichier spigot.jar](https://www.spigotmc.org/wiki/buildtools/)
 
 
 
