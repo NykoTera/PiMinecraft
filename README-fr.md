@@ -13,7 +13,7 @@ Ce projet est fait pour ceux qui veulent facilement disposer d'un serveur à dom
 ## Prérequis
 
 1. Vous devez vous assurer de disposer de la  [dernière version de raspbian](https://www.raspberrypi.org/documentation/raspbian/updating.md)
-2. Vous aurez besoin de la [dernière version de java](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-debian-10)
+2. Vous aurez besoin d'une version 16 ou plus récente de java. Je vous renvoie vers [ce site pour trouver une version arm32 de java](https://adoptium.net), et  [ce site pour installer manuellement le paquet](https://www.digitalocean.com/community/tutorials/how-to-manually-install-oracle-java-on-a-debian-or-ubuntu-vps)
 3. Assurez-vous que screen est bien installé : `sudo apt-get install screen`
 4. [Téléchargez le dernier buildtools.jar pour générer un fichier spigot.jar](https://www.spigotmc.org/wiki/buildtools/)
 
@@ -31,7 +31,7 @@ Je vous laisse simplement le script `run.sh`. Reportez-vous aux liens ci-dessus 
 
 Souvenez-vous que le premier lancement du script va créer les données nécessaires au serveur (cartes,...).
 
-*Mon conseil : rangez votre serveur dans un dossier dédié et expmicitement nommé (ex : MonServeur).*
+*Mon conseil : rangez votre serveur dans un dossier dédié et explicitement nommé (ex : MonServeur).*
 
 
 
