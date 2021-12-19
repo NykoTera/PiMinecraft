@@ -2,4 +2,4 @@
 
 cd chemserv
 
-java -Xms512M -Xmx1024M -XX:+UseConcMarkSweepGC -jar ./spigot.jar nogui --forceUpgrade
+java -Xms512M -Xmx1024M -jar ./spigot.jar nogui --forceUpgrade
