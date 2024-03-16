@@ -17,7 +17,7 @@ shopt -s dotglob
 rm -rf chemspigot/*
 sudo wget -nd  https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar -O chemspigot/BuildTools.jar
 cd chemspigot
-sudo java -Xmx1024M -jar chemspigot/BuildTools.jar --rev 1.16.1
+sudo java -Xmx1024M -jar chemspigot/BuildTools.jar --rev 1.20.1
 cd
 
 #   Saving the 2 latest minecraft logs and deleting former spigot.jar version
